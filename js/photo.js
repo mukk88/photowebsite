@@ -1,7 +1,8 @@
 $(function(){
 	$("#container").justifiedGallery({
 		margins:10,
-		rowHeight:200
+		lastRow: 'nojustify',
+		rowHeight:220
 	}).on('jg.complete', function () {
 	    $('#container a').swipebox();
 	});
