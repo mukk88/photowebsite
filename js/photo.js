@@ -6,4 +6,9 @@ $(function(){
 	}).on('jg.complete', function () {
 	    $('#container a').swipebox();
 	});
+
+
+	$('#hamburger').click(function(){
+		$('.layout').toggleClass('expanded');
+	});
 });

@@ -2,13 +2,21 @@ body{
 	margin:0;
 }
 
-.title{
-	height:5.7em;
+.layout{
+	max-height: 5em;
 	position:fixed;
 	width:100%;
-	/*border-bottom: 1px solid #C9C9C9;*/
 	background-color: white;
 	z-index: 99;
+	-webkit-transition: max-height 0.8s ease-out;
+	-moz-transition: max-height 0.8s ease-out;
+    transition: max-height 0.8s ease-out;
+    overflow: hidden;
+}
+
+.layout.expanded{
+	height: auto;
+    max-height: 25em;
 }
 
 #logo{
@@ -27,7 +35,7 @@ body{
 }
 
 .navigation{
-	display: none;
+	margin-top: 1em;
 }
 
 #hamburger{
@@ -41,28 +49,25 @@ body{
 ul { list-style-type: none; } 
 
 .navigation li{
-	text-transform: uppercase;
-	color:#858585;
 	font-family: Viga,Roboto,Helvetica,Arial,sans-serif;
+	line-height: 2em;
+	font-size:1.1em;
 	cursor: pointer;
-	overflow: auto;
-	border-bottom:1px solid;
-	margin-right: 40px;
+	margin-left: -2.6em;
+	color:#858585;
 }
 
 .navigation li .text{
-	float:right;
-	display: block;
-	line-height: 3em;
-	font-size: 0.9em;
+	margin-left: 2.6em;
 }
 
 .navigation li:hover{
 	color:black;
+	background-color: #f3f3f3;
 }
 
 .content{
-	padding-top: 5.7em;
+	padding-top: 4em;
 	width: 100%;
 }
 
@@ -85,6 +90,28 @@ ul { list-style-type: none; }
 		width:240px;
 		margin-top: 9.7em;
 		display: inline;
+		margin-left: -12.7em;
+	}
+
+	.navigation li{
+		text-transform: uppercase;
+		overflow: auto;
+		border-bottom:1px solid;
+		margin-right: 40px;
+		margin-left: 0;
+		font-size: 1em;
+	}
+
+	.navigation li .text{
+		float:right;
+		display: block;
+		line-height: 3em;
+		font-size: 0.9em;
+		margin-left: 0;
+	}
+
+	.navigation li:hover{
+		background-color: #FFFFFF;
 	}
 
 	.content{
@@ -105,5 +132,31 @@ ul { list-style-type: none; }
 		margin-top: 0.7em; 
 	}
 
+	.layout{
+		overflow: visible;
+	}
 
+	.content{
+		padding-top: 5.7em;
+	}
+
+}
+
+/*for tiny screens*/
+@media only screen and (max-width: 380px){
+
+	.maintitle{
+		font-size: 1.1em;
+		margin-top: 1.7em; 
+	}
+
+	.subtitle{
+		display: none;
+	}
+
+	#hamburger{
+		height:2em;
+		margin-top: 1.5em;
+		margin-left: 0.5em;
+	}
 }
