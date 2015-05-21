@@ -17,7 +17,15 @@ $(function(){
 	});
 
 	$('#navlandscape').click(function(){
+		$('#container').html('');
 		$('#container').load('landscape-inner.html');
+		$("#container").justifiedGallery({
+			margins:10,
+			lastRow: 'nojustify',
+			rowHeight:220
+		}).on('jg.complete', function () {
+		    $('#container a').swipebox();
+		});
 	});
 
 	$('#navportrait').click(function(){
