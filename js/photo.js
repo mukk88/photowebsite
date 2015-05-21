@@ -11,4 +11,17 @@ $(function(){
 	$('#hamburger').click(function(){
 		$('.layout').toggleClass('expanded');
 	});
+
+	$('#navhome').click(function(){
+		window.location = 'index.html';
+	});
+
+	$('#navlandscape').click(function(){
+		$('#container').load('landscape-inner.html');
+	});
+
+	$('#navportrait').click(function(){
+		window.location = 'landscape.html';
+	});
+
 });
