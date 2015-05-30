@@ -1,10 +1,10 @@
 $(function(){
-	$("#container").justifiedGallery({
+	$("#image-container").justifiedGallery({
 		margins:10,
 		lastRow: 'nojustify',
 		rowHeight:220
 	}).on('jg.complete', function () {
-	    $('#container a').swipebox();
+	    $('#image-container a').swipebox();
 	});
 
 
@@ -21,7 +21,15 @@ $(function(){
 	});
 
 	$('#navportrait').click(function(){
-		window.location = 'landscape.html';
+		window.location = 'portrait.html';
+	});
+
+	$('#navabout').click(function(){
+		window.location = 'about.html';
+	});
+
+	$('#navprice').click(function(){
+		window.location = 'price.html';
 	});
 
 });

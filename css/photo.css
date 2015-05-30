@@ -67,7 +67,7 @@ ul { list-style-type: none; }
 }
 
 .content{
-	padding-top: 4em;
+	padding-top: 5em;
 	width: 100%;
 }
 
@@ -86,8 +86,9 @@ ul { list-style-type: none; }
 #background-image{
 	width:auto;
 	height:100%;
-	-webkit-transform: scaleX(1);
-    transform: scaleX(1);
+	-moz-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
 }	
 /*
 body{height:100%;
@@ -97,6 +98,77 @@ body{height:100%;
    background-size:cover;
 }
 */
+
+#container{
+	font-family: 'Abel', sans-serif;
+}
+
+#container .header{
+	font-size: 2em;
+	line-height: 2em;
+	margin-left: 1em;
+}
+
+#container .main{
+	padding-left: 2em;
+}
+
+#container .title{
+	font-size:1.5em;
+	margin-top: 1em;
+}
+
+#container .iconlist{
+
+}
+
+#container img{
+	height: 48px;
+}
+
+.main img{
+	display: inline;
+}
+
+#container table{
+	border-bottom: 1px solid #d3d3d3;
+}
+
+#container table th{
+	width:24px;
+	height: 48px;
+}
+
+#container #downloadth{
+	width:105px;
+}
+
+#container .detail{
+	width: 400px;
+	text-align: left;
+	padding-left: 2em;
+}
+
+#container .rectangle{
+	border:1px solid;
+	width: 34px;
+	height: 35px;
+	padding-top: 15px;
+}
+
+#container .text{
+}
+
+#container .text li{
+	margin-left: -2em;
+}
+
+.whitespace{
+	height:200px;
+}
+
+
+
 /*for non phones*/
 @media only screen and (min-width: 741px){
 
@@ -133,7 +205,7 @@ body{height:100%;
 	}
 
 	.navigation li:hover{
-		background-color: #FFFFFF;
+		background-color: transparent;
 	}
 
 	.content{
@@ -169,10 +241,16 @@ body{height:100%;
 	#background-image{
 		width:auto;
 		height: 100%;
-		-webkit-transform: scaleX(-1);
-    	transform: scaleX(-1);
+		-webkit-transform: scaleX(1);
+    	transform: scaleX(1);
+		-moz-transform: scaleX(1);
     	float: right;
 	}
+
+	#container .header{
+		margin-left: 0;
+	}
+
 
 }
 
