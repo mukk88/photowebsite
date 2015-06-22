@@ -167,6 +167,18 @@ body{height:100%;
 	height:200px;
 }
 
+.money{
+	/*color:red;*/
+}
+
+#leftspace{
+	padding-left: 6.4em !important;
+}
+
+.item{
+	width:300px;
+	display: inline-block;
+}
 
 
 /*for non phones*/
@@ -250,7 +262,6 @@ body{height:100%;
 	#container .header{
 		margin-left: 0;
 	}
-
 
 }
 

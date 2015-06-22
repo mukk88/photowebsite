@@ -28,6 +28,10 @@ $(function(){
 		window.location = 'about.html';
 	});
 
+	$('#navcontact').click(function(){
+		window.location = 'contact.html';
+	});
+
 	$('#navprice').click(function(){
 		window.location = 'price.html';
 	});
